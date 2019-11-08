@@ -1,0 +1,83 @@
+package first;
+import java.awt.Font;
+import java.util.Calendar;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+
+import javax.swing.JFormattedTextField;
+
+import javax.swing.*;
+public class Leaveform {
+
+	JFrame f;
+	public static void main(String[] args) {
+		Leaveform l= new Leaveform();
+		}
+	public Leaveform() {
+        f =new JFrame();
+		f.setBounds(0, 0,1400,750);
+		f.setVisible(true);	
+		f.setLayout(null);
+		JLabel l1=new JLabel("LEAVE FORM");
+		l1.setBounds(620,0,700,40);
+		l1.setFont(new Font("Tahoma", Font.PLAIN, 20));
+		JLabel l2 = new JLabel("Department");
+		l2.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		l2.setBounds(550,50,200,30);
+		JLabel l3 = new JLabel("Designation");
+		l3.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		l3.setBounds(550,100,150,50);
+		JLabel l4= new JLabel("Employee Id");
+		l4.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		l4.setBounds(550,150,150,50);
+		JLabel l5=new JLabel("Employee name");
+		l5.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		l5.setBounds(550,200,150,50);
+		JLabel l6=new JLabel("Leave Type");
+		l6.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		l6.setBounds(550,250,150,50);
+		JLabel l7=new JLabel("From Date");
+		l7.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		l7.setBounds(550,300,150,50);
+		JLabel l8=new JLabel("To Date");
+		l8.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		l8.setBounds(550,350,150,50);
+		JLabel l9=new JLabel("Description");
+		l8.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		l9.setBounds(550,400,150,50);
+		String department[]={"Production","Marketing","Finance"};
+		JComboBox cb1=new JComboBox(department);
+		cb1.setBounds(700,50,100,20);
+		String designation[]={"Manager","Supervisor","Worker","Accountant"};
+		JComboBox cb2=new JComboBox(designation);
+		cb2.setBounds(700,100,100,20);
+		JTextField t1=new JTextField();
+		t1.setBounds(700,160,100,25);
+		t1.setFont(new Font("Tahoma", Font.PLAIN, 10));
+		JTextField t2=new JTextField();
+		t2.setBounds(700,210,100,25);
+		t2.setFont(new Font("Tahoma", Font.PLAIN, 10));
+		DateFormat format = new SimpleDateFormat("yyyy--MM--dd");
+	    JFormattedTextField t3= new JFormattedTextField(format);
+	    t3.setBounds(700,260,100,25);
+	    
+
+
+
+
+	f.add(l1);
+	f.add(l2);
+	f.add(l3);
+	f.add(l4);
+	f.add(l5);
+	f.add(l6);
+	f.add(l7);
+	f.add(l8);
+	f.add(l9);
+	f.add(cb1);
+	f.add(cb2);
+	f.add(t1);
+	f.add(t2);
+	f.add(t3);
+}
+}
